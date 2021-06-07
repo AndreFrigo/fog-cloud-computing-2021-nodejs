@@ -17,11 +17,11 @@ app.use(bodyParser.json({ extended: true }));
 dbHelper.init();
 
 app.get('/', (req, res) => {
-    res.status(200).send("If you see this the app v1.0.0 is working!\n");
+    res.status(200).send("If you see this the app v1.0.0 (development branch) is working!\n");
 });
 
 app.get('/healthz', (req, res) => {
-    if(alive){
+    if (alive) {
         res.status(200).send("ok\n");
     }
 });
